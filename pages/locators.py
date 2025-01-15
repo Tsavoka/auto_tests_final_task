@@ -6,7 +6,7 @@ class MainPageLocators():
 
 
 class LoginPageLocators():
-    REGISTER_FORM = (By.ID, 'register-form')
+    REGISTER_FORM = (By.ID, 'register_form')
     REGISTER_EMAIL =  (By.NAME, 'registration-email')
     REGISTER_PASSWORD = (By.NAME, 'registration-password1')
     REGISTER_CONFIRM = (By.NAME, 'registration-password2')
