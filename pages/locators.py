@@ -14,3 +14,9 @@ class LoginPageLocators():
     LOGIN_FORM = (By.ID, 'login_form')
     LOGIN_EMAIL = (By.NAME, 'login-username')
     LOGIN_PASSWORD = (By.NAME, 'login-password')
+
+
+class ProductPageLocators():
+    ADD_TO_BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
+    ALERT_SUCCESS = (By.CLASS_NAME, 'alert-success')
+    ALERT_INFO = (By.CLASS_NAME, 'alert-info')
