@@ -20,3 +20,5 @@ class ProductPageLocators():
     ADD_TO_BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
     ALERT_SUCCESS = (By.CLASS_NAME, 'alert-success')
     ALERT_INFO = (By.CLASS_NAME, 'alert-info')
+
+    BOOK_INFO = (By.CLASS_NAME, 'col-sm-6.product_main')
