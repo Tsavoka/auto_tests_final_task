@@ -17,8 +17,9 @@ class LoginPageLocators():
 
 
 class ProductPageLocators():
-    ADD_TO_BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
-    ALERT_SUCCESS = (By.CLASS_NAME, 'alert-success')
-    ALERT_INFO = (By.CLASS_NAME, 'alert-info')
+    ADD_TO_BASKET = (By.CLASS_NAME, 'btn-primary.btn-add-to-basket')
+    ALERT_SUCCESS = (By.CSS_SELECTOR, '.alert-success .alertinner strong')
+    ALERT_INFO = (By.CSS_SELECTOR, '.alert-info .alertinner strong')
 
-    BOOK_INFO = (By.CLASS_NAME, 'col-sm-6.product_main')
+    BOOK_NAME = (By.CSS_SELECTOR, '.product_main h1')
+    BOOK_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
