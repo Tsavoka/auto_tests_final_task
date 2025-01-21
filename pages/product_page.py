@@ -14,10 +14,10 @@ class ProductPage(BasePage):
         # проверка, что правильная книга добавлена
         book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME).text
         alert_book_name = self.browser.find_element(*ProductPageLocators.ALERT_SUCCESS).text
-        assert book_name in alert_book_name, f'{book_name} is not alert {alert_book_name}'
+        assert book_name == alert_book_name, f'{book_name} is not alert {alert_book_name}'
 
     def should_be_currect_price(self):
         # проверка итоговой стоимости корзины
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
         alert_book_price = self.browser.find_element(*ProductPageLocators.ALERT_INFO).text
-        assert book_price in alert_book_price, f'{book_price} is not alert {alert_book_price}'
+        assert book_price == alert_book_price, f'{book_price} is not alert {alert_book_price}'
