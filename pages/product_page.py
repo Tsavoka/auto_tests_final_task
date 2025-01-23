@@ -21,3 +21,11 @@ class ProductPage(BasePage):
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
         alert_book_price = self.browser.find_element(*ProductPageLocators.ALERT_INFO).text
         assert book_price == alert_book_price, f'{book_price} is not alert {alert_book_price}'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ALERT_SUCCESS), \
+        "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.ALERT_SUCCESS), \
+        "Success message have not disappeared, as it should be"
