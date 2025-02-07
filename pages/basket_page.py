@@ -9,15 +9,15 @@ class BasketPage(BasePage):
         self.should_not_be_something()
 
     def should_be_basket_url(self):
-        # проверка на корректный url адрес
+        # Проверка на корректный url адрес.  
         assert "basket" in self.browser.current_url, "This is not a basket page"
 
     def should_be_empty(self):
-        # корзина пуста
+        # Корзина должна быть пуста.  
         assert self.is_element_present(*BasketPageLocators.EMPTY_BASKET), \
         "Basket not empty, but it should be"
 
     def should_not_be_something(self):
-        # в корзине не должно что-либо быть
+        # В корзине не должно что-либо быть.  
         assert self.is_not_element_present(*BasketPageLocators.NOT_EMPTY_BASKET), \
         "Something in basket, but it should't be"

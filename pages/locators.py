@@ -34,6 +34,7 @@ class ProductPageLocators():
     BOOK_NAME = (By.CSS_SELECTOR, '.product_main h1')
     BOOK_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
 
+
 class BasketPageLocators():
     EMPTY_BASKET = (By.CSS_SELECTOR, '#content_inner > p')
     NOT_EMPTY_BASKET = (By.CSS_SELECTOR, '#content_inner > div.basket-title.hidden-xs')
