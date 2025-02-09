@@ -3,13 +3,16 @@ import pytest
 from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
 from .pages.login_page import LoginPage
+from .pages.locators import LINK_PRODUCT
 
+
+link = LINK_PRODUCT
 
 @pytest.mark.need_review
 @pytest.mark.parametrize('promo_offer', [pytest.param("7", marks=pytest.mark.xfail)])
 def test_guest_can_add_product_to_basket(browser, promo_offer):
     # Гость может добавить товар в корзину.  
-    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
+    link = f"{link}?promo=offer{promo_offer}"
     page = ProductPage(browser, link)
     page.open()
     page.should_not_be_success_message()
@@ -17,11 +20,7 @@ def test_guest_can_add_product_to_basket(browser, promo_offer):
     page.solve_quiz_and_get_code()
     page.should_be_info_alert()
     page.success_message_should_disappear()
-
-
-link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
-# Другая ссылка, чтобы не прорешивать алерты каждый раз.  
-
+ 
 
 @pytest.mark.xfail
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):

@@ -4,9 +4,10 @@ from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.base_page import BasePage
 from .pages.basket_page import BasketPage
+from .pages.locators import LINK_MAIN
 
 
-link = "http://selenium1py.pythonanywhere.com/"
+link = LINK_MAIN
 
 
 @pytest.mark.login_guest

@@ -1,6 +1,10 @@
 from selenium.webdriver.common.by import By
 
 
+LINK_MAIN = "http://selenium1py.pythonanywhere.com/"
+LINK_PRODUCT = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
